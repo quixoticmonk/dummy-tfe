@@ -1,5 +1,6 @@
 data "tfe_variable_set" "test" {
   name         = "stacks_infra2_ou"
+organization = "wellsiau-org"
 }
 
 data "tfe_variables" "test" {

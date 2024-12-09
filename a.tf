@@ -10,3 +10,12 @@ data "tfe_variables" "test" {
 output "vars" {
     value= data.tfe_variables.test
 }
+
+terraform {
+  required_providers {
+    tfe = {
+      source = "hashicorp/tfe"
+      version = "0.57"
+    }
+  }
+}

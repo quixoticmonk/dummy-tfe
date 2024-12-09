@@ -8,6 +8,6 @@ data "tfe_variables" "test" {
 }
 
 
-outputs "vars" {
+output "vars" {
     value= data.tfe_variables.test
 }

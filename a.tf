@@ -1,12 +1,11 @@
-data "tfe_variable_set" "test" {
-  name         = "stacks_infra2_ou"
-organization = "wellsiau-org"
+data "tfe_workspace" "test" {
+  name         = "dummy-tfe"
+  organization = "wellsiau-org"
 }
 
 data "tfe_variables" "test" {
-  variable_set_id = data.tfe_variable_set.test.id
+  workspace_id = data.tfe_workspace.test.id
 }
-
 
 output "vars" {
     value= data.tfe_variables.test
